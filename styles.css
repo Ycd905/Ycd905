@@ -1,0 +1,226 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* 黑暗模式样式 */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* 黑暗模式切换按钮 */
+#dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #35424a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #e8491d;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #35424a;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.dark-mode main {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background: #35424a;
+    color: white;
+    border-radius: 5px;
+}
+
+.dark-mode footer {
+    background-color: #0d0d0d;
+}
+
+.dark-mode nav {
+    background-color: #b33900;
+}
+
+/* 项目样式 */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .project {
+    border-color: #444;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.dark-mode .project:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* 关于页样式 */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e8491d;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    list-style-type: none;
+}
+
+.skills li {
+    background: #f4f4f4;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.dark-mode .skills li {
+    background: #2a2a2a;
+}
+
+/* 联系页样式 */
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #e8491d;
+    text-decoration: none;
+}
+
+.dark-mode .contact-info a {
+    color: #bb86fc;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-img {
+        margin: 0 auto;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
