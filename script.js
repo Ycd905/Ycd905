@@ -70,10 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <section class="contact-section">
                     <h2>联系方式</h2>
                     <div class="contact-info">
-                        <p>📧 邮箱: <a href="mailto:example@example.com">example@example.com</a></p>
-                        <p>💻 GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-                        <p>👔 LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
-                        <p>📱 微信: yourwechatid</p>
+                        <p>📧 邮箱: <a href="mailto:2062694413@qq.com">2062694413@qq.com</a></p>
+                        <p>💻 GitHub: <a href="https://github.com/Ycd905" target="_blank">https://github.com/Ycd905</a></p>                        
+                        <p>📱 微信: 18891848933</p>
                     </div>
                 </section>
             `
